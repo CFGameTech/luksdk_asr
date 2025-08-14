@@ -1,0 +1,4 @@
+#Thu Jun 26 11:45:26 CST 2025
+base.0=/Users/yq_mac/github/mainland/IntermodalGameDemo_mainland/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

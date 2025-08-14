@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.cftech.gamesdk.demo.app-mergeReleaseResources-18:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/yq_mac/.gradle/caches/transforms-3/89a095ac8d3fecd653c03350e632e825/transformed/material-1.4.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        }
+    ]
+}

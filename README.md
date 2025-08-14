@@ -7,7 +7,7 @@
 
 ### 1.0、将SDK导入到工程中
 
-可以在Demo中拷贝，也可以用根目录下luksdk文件夹中的SDK导入
+可以只把项目中的luksdk文件夹下载下来，导入到工程中
 
 ### Android:
 *    把cfg_lib_v1.8.2.1.aar拷贝到工程app/libs目录下

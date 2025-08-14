@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/yq_mac/github/mainland/IntermodalGameDemo_mainland/android/app"
+    name=":app"
+    type="APP"
+    maven="CFGameSDKDemo:app:"
+    gradle="7.2.1"
+    buildFolder="build"
+    bootClassPath="/Users/yq_mac/Library/Android/sdk/platforms/android-32/android.jar:/Users/yq_mac/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-32"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
