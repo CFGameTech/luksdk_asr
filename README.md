@@ -10,9 +10,9 @@
 可以只把项目中的luksdk文件夹下载下来，导入到工程中
 
 ### Android:
-*    把cfg_lib_v1.8.2.1.aar拷贝到工程app/libs目录下
+*    把cfg_lib_v1.8.4.8.1.aar拷贝到工程app/libs目录下
 *    参考: [第一步：集成 LUKSDK](https://wiki.luk.live/docs/quick-start/client?env=android) 添加其他的依赖文件以及设置相关配置
-*     还需要再build.gradle的dependencies中添加依赖implementation 'com.microsoft.cognitiveservices.speech:client-sdk:1.42.0'
+*     还需要再build.gradle的dependencies中添加依赖implementation 'com.microsoft.cognitiveservices.speech:client-sdk:1.46.0'
 
     
 ### iOS:

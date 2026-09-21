@@ -32,12 +32,18 @@ var cf_game={
             }
     },
     OpenApi:{
-        getBaseInfo: function (callback) {
-                    console.log("sdk getBaseInfo");
-                    console.log(window.webkit.messageHandlers);
-                    var invokeId = getInvokeId();
-                    cfgCallJsBacks[invokeId] = callback;
-                    CFGameOpenApi.getBaseInfo.postMessage(invokeId);
+        getBaseInfo: function (callback,dataJson) {
+                console.log("sdk getBaseInfo 1846");
+                console.log(window.webkit.messageHandlers);
+                var invokeId = getInvokeId();
+                cfgCallJsBacks[invokeId] = callback;
+                var message = {
+                    invokeId:invokeId,
+                    data:{
+                        dataJson:dataJson,
+                    }
+                };
+                CFGameOpenApi.getBaseInfo.postMessage(message);
         },
         
         getWindowSafeArea: function (callback) {
@@ -52,7 +58,16 @@ var cf_game={
             console.log("sdk openChargePage");
             CFGameOpenApi.openChargePage.postMessage(invokeId);
         },
-
+        openPlatformPage: function (path,dataStr) {
+            console.log("sdk openPlatformPage");
+            var message = {
+                data:{
+                    path:path,
+                    dataStr:dataStr
+                }
+            };
+            CFGameOpenApi.openPlatformPage.postMessage(message);
+        },
         closeGamePage: function () {
             var invokeId = getInvokeId();
             console.log("sdk closeGamePage");
@@ -62,7 +77,7 @@ var cf_game={
     },
     GameLife:{
         getGameloadProgress: function (progress){
-            console.log("sdk getGameloadProgress");
+//            console.log("sdk getGameloadProgress");
             CFGameLife.getGameloadProgress.postMessage(progress);
         },
         gameLoadFail() {
@@ -85,6 +100,18 @@ var cf_game={
                 }
             };
             CFGameLife.preJoinGame.postMessage(message);
+        },
+        canStartGame(uid, callback) {
+            console.log("sdk canStartGame");
+            var invokeId = getInvokeId();
+            cfgCallJsBacks[invokeId] = callback;
+            var message = {
+                invokeId:invokeId,
+                data:{
+                    uid:uid,
+                }
+            };
+            CFGameLife.canStartGame.postMessage(message);
         },
         onSeatAvatarTouch(userid, seat) {
             console.log("sdk onSeatAvatarTouch");
@@ -203,11 +230,19 @@ var cf_game={
             var message = {
                 data:{
                     imageData:imageData,
-                    dataJson:dataJson
+                    dataJson:dataJson,
                 }
             };
-            CFGameLife.gameSendScreenshot.postMessage(message)
-        }
+            CFGameLife.gameSendScreenshot.postMessage(message);
+        },
+//        appHide(){
+//            console.log("sdk appHide");
+//            CFGameLife.appHide.postMessage("success");
+//        },
+//        appShow(){
+//            console.log("sdk appShow");
+//            CFGameLife.appShow.postMessage("success");
+//        }
 
     }
 };
